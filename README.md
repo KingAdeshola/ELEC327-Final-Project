@@ -11,6 +11,8 @@ Sprinklers, while useful, present a unique problem of water wastage. In many cas
 ##Code
   The code in the main.c file configures the analog-to-digital converter (ADC) and sets up an LCD display for output. The main loop continuously reads the moisture level using the ADC, displays it on the LCD, and checks against predefined moisture thresholds to determine soil moisture status. Depending on the moisture level, corresponding messages are displayed ("Soil too wet," "Moisture OK," or "Water needed"), and an optional LED can be controlled to reflect the soil's moisture status. The code also includes a delay for testing purposes and provides a basic framework for monitoring and displaying soil moisture conditions.
 
+![ELEC 327 Final Project Diagram](https://github.com/KingAdeshola/ELEC327-Final-Project/assets/105616353/48b97f3e-e033-4458-8f53-5e7af07e057c)
+
 
 ##Important Connections
 MH-Sensor-Series AO to P1.3
