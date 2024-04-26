@@ -10,9 +10,12 @@ Sprinklers, while useful, present a unique problem of water wastage. In many cas
   The water pump is controlled by a low-level trigger that is connected to pin 2.3 of an MSP430G2553. If the state is either “Soil too wet” or “Moisture OK”, pin 2.3 will be set to the ON state, which outputs a voltage of 3.3 V, setting the low-level trigger to an OFF state. If the state is “Water needed”, pin 2.3 will be set to the OFF state, which outputs 0 V, setting the low-level trigger to an ON state that engages the water pump. This water pump will be engaged until the system enters the “Soil too wet” mode. 
 ##Code
   The code in the main.c file configures the analog-to-digital converter (ADC) and sets up an LCD display for output. The main loop continuously reads the moisture level using the ADC, displays it on the LCD, and checks against predefined moisture thresholds to determine soil moisture status. Depending on the moisture level, corresponding messages are displayed ("Soil too wet," "Moisture OK," or "Water needed"), and an optional LED can be controlled to reflect the soil's moisture status. The code also includes a delay for testing purposes and provides a basic framework for monitoring and displaying soil moisture conditions.
+
+
 ##Important Connections
 MH-Sensor-Series AO to P1.3
 LCD SDA is connected in series to a 300 ohm resistor as well as to pin 1.7
 LCD SCL is connected in series to a 300 ohm resistor as well as to pin 1.6
 The relay’s IN is connected to pin 2.3
 
+*Note: The plants that we chose for our projects were in shallow soil,
