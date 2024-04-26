@@ -47,24 +47,18 @@ int main()
         if (moisture < SOIL_WET_THRESHOLD)
         {
             LcdWriteString("Soil too wet");
-            // Turn on LED (optional)
-            //P1OUT |= BIT0;
             //Set P2.3 to on
             P2OUT |= BIT3;
         }
         else if (moisture >= SOIL_WET_THRESHOLD && moisture < SOIL_DRY_THRESHOLD)
         {
             LcdWriteString("Moisture OK");
-            // Turn off LED (optional)
-            //P1OUT &= ~BIT0;
             //Set P2.3 to on
             P2OUT |= BIT3;
         }
         else
         {
             LcdWriteString(" Water needed  ");
-            // Turn on LED (optional)
-            //P1OUT |= BIT0;
             // Set P2.3 to OFF state
             P2OUT &= ~BIT3;
         }
